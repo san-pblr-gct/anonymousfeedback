@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*Utilities */
+[contentEditable=true]:empty:not(:focus):before{
+  content:attr(data-placeholder) 
+}
+
+[contentEditable=true]:focus{
+  outline: none;
+  
+}
+
+/*Controls*/
+input[type=submit]{
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 110%;
+  max-height: 100%;
+  border-color: #3b5998;
+  padding: 0.2%;
+  margin: 0.5% 0% 0.25% 0.5%;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active
+{
+  background-color: #4267b2;
+  border-color: #4267b2;
+  cursor: pointer;
+}
+
+select{
+  background-color: #fff;
+  color: #3b5998;
+  font-size: 110%;
+  max-height: 100%;
+  border-color: #3b5998;
+  padding: 0.2%;
+  margin: 0.5% 0% 0.25% 0.5%;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  background-color: #e9ebee;
+  color:black;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  height: 100%;
+}
+
+.page-wrap{
+  width: 55%;
+  margin: 0 auto;
+  min-height: 100%;
+  background-color: #e9ebee;
+  overflow-y: auto;
+}
+
+.headerSection{
+  min-height: 20%;
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 200%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.wall{
+  margin: 2% 5% 0 5%;
+  padding: 0;
+}
+
+.postSection{
+  min-height:25%;
+  max-height: 25%;
+  background-color: #fff;
+  /*height: 25%;*/
+}
+
+.divTextArea,
+.divPostComment{
+  min-height: 75%;
+  max-height: 75%;
+  width: 100%;
+  border: 1px;
+  border-style: solid;
+  overflow: auto;
+  /*align-items: center;
+  justify-content: flex-start;
+  display: flex;*/
+  height: 4em;
+  padding: 4px;
+}
+
+.userPost{
+  /*background-color: red;*/
+  min-height: 25%;
+  max-height: 25%;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+}
+
+
+.wallContainer{
+  padding:0.5%;
+  border: 1px;
+  min-height: 75%;
+  margin-bottom: 1%;
+  background-color: #fff;
+  /*height: 75%;*/
+}
+
+.postedComment{
+ 
+  padding: 1.75%;
+  text-align: justify;
+}
+
+.wallComments{
+  margin: 2% 1% 2% 5%;
+}
+.comment{
+  width: 100%;
+  margin-bottom: 1%;
+}
+.message{
+  font-size: 90%;
+  font-weight: 300;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.date{
+  font-size: 90%;
+  font-weight: 300;
+  justify-content: flex-end;
+  display: flex;
+  width: 15%;
+}
+
+.divPostComment{
+  height: 2em;
+}
+
