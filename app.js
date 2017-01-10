@@ -44,15 +44,15 @@ module.exports = function (app) {
   app.get('/', function (req, res) {
     console.log(__dirname);
     //res.sendFile('/public/index.html', { root: __dirname});
-    handleRender(req,res);
-    // Feedback.find(function (err, feedbacks) {
-    //   if (err) {
-    //     res.json({ IsSucessful: false, Info: 'Error during feedback retrival' });
-    //   }
-    //   else {
-    //     res.json({ IsSucessful: true, Info: 'Feedbacks retrived successfully', data: feedbacks });
-    //   }
-    // });
+    //handleRender(req,res);
+     Feedback.find(function (err, feedbacks) {
+       if (err) {
+        res.json({ IsSucessful: false, Info: 'Error during feedback retrival' });
+       }
+       else {
+        res.json({ IsSucessful: true, Info: 'Feedbacks retrived successfully', data: feedbacks });
+       }
+    });
   });
 
   app.post('/feedback', function (req, res) {
