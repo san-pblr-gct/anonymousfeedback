@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // static files
-app.use("/styles", express.static(__dirname + '/public/'));
+//app.use("/styles", express.static(__dirname + '/public/'));
 
 var port= process.env.PORT || 3000
 
