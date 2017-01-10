@@ -14,8 +14,10 @@ app.use(bodyParser.urlencoded({
 // static files
 app.use("/styles", express.static(__dirname + '/public/'));
 
+var port= process.env.PORT || 3000
+
 var feedback = require('./app.js')(app);
-var server = app.listen(80, function(){
+var server = app.listen(port, function(){
   mongoose.connect('mongodb://santhosh:3FqOFuo8kXXcrIRp6Lb8l6icwHLm8QdKhENkRIJkWWWw2Q3tyU1ARKb5KdgUtGKVPaOhOFOF7ukgPNOz7Z4aXg==@santhosh.documents.azure.com:10250/?ssl=true');
 
 });
