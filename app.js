@@ -1,14 +1,8 @@
 var _ = require('lodash');
 var Feedback = require('./models/feedback.js');
 
-//React-Redux
-var React = require('react');
-
-
-
 module.exports = function (app) {
   app.get('/', function (req, res) {
-    console.log(__dirname);
     res.sendFile('/public/index.html', { root: __dirname});
     //handleRender(req,res);
     //  Feedback.find(function (err, feedbacks) {
