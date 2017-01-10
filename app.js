@@ -10,18 +10,14 @@ import DivComponent from './DivComponent';
 
 var ReactDOMServer = require('react-dom/server');
 
-class MyComponent extends React.Component {
-  render() {
-    return <div>Hello World</div>;
-  }
-}
+
 
 // Redux handlers
 function handleRender(req, res) {
   const html = ReactDOMServer.renderToString(<MyComponent />);
   //const preloadedState = store.getState();
-  //res.sendFile('/public/index.html', { root: __dirname});
-  res.send(renderFullPage(html, null))
+  res.sendFile('/public/index.html', { root: __dirname});
+  //res.send(renderFullPage(html, null))
 }
 
 function renderFullPage(html, preloadedState){
